@@ -1,0 +1,16 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='styles/captcha.css') }}" rel="stylesheet">
+    <title>Cephali | Captcha Solver</title>
+</head>
+<body>
+    <p id="site_key" style="color:white">{{site_key}}</p>
+    <div id="captcha_holder">
+    </div>
+</body>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"async defer></script>
+<script src="{{ url_for('static', filename='scripts/captcha.js') }}"></script>
+</html>
